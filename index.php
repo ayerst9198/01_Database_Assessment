@@ -35,7 +35,7 @@
             </div>    <!-- / logo -->
         </a>
             
-            <h1>Dood-Tatsic Reviews</h1>
+            <h1>Food-Tastic Reviews</h1>
         </div>    <!-- / banner -->        
         
         <div class="box side">

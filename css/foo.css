@@ -33,7 +33,7 @@ body {
 
 /* logo, banner and footer background are the same */
 .logo, .banner, .footer {
-    background-color: #6C9D58;  /* pale green */
+    background-color: #A1021D;  /* pale green */
 }
 
 /* Set font on dark areas to white */
@@ -62,14 +62,14 @@ body {
 
 .side {
     grid-area: side;
-    background-color: #639051;
+    background-color: #F1A155;
     /*639051*/
 }
 
 .main {
     grid-area: main;
-    background-color: #BAD8B9;  /* very pale green */
-    border: solid 1px #24341D;
+    background-color: #F1A155;  /* very pale green */
+    border: solid 1px #E27712;
 }
 
 
@@ -130,8 +130,8 @@ a:title{color: #ffffff}
 }
 
 .line {
-    color: #054d3b;
-    border: 0.75px solid #054d3b;
+    color: #340F09;
+    border: 0.75px solid #340F09;
 }
 
 .contact {
@@ -154,9 +154,9 @@ a:title{color: #ffffff}
     position: relative;
     width: 45px;
     left: -1px;
-    background-color: #276157;
-    color: #288845;
-    border: 1px solid #115C10;
+    background-color: #340F09;
+    color: #340F09;
+    border: 1px solid #340F09;
     border-radius: 5px 0 5px 0
 }
 
@@ -165,8 +165,8 @@ a:title{color: #ffffff}
     position: relative;
     width: 210.5px;
     left: -1px;
-    background-color: #276157;
-    color: #288845;
-    border: 1px solid #115C10;
+    background-color: #340F09;
+    color: #340F09;
+    border: 1px solid #340F09;
     border-radius: 5px 0 5px 0
 }
