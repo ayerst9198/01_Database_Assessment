@@ -63,12 +63,12 @@ body {
 .side {
     grid-area: side;
     background-color: #F1A155;
-    /*639051*/
+    color: #000
 }
 
 .main {
     grid-area: main;
-    background-color: #F1A155;  /* very pale green */
+    background-color: #F1A155;  /* very pale orange */
     border: solid 1px #E27712;
 }
 
@@ -86,15 +86,15 @@ h1, h2, h3, h4 {
 
 /* Side Links */
 a.side{font-weight: bold; text-decoration: none;}
-a.side:link, .nav a:visited {color: #1d4e0a;}
-a.side:hover {color: #4d7e3b;}
+a.side:link, .nav a:visited {color: #880a1b;}
+a.side:hover {color: #c77c1b;}
 
 
 /* links in page */
 a {font-weight: bold;}
-a:link{color: #475f3e;} /*light green */
-a:visited{color: #1d4e0a;} /* darker green */
-a:hover{color: #4d7e3b;}    /* medium light green*/
+a:link{color: #a57713;} /*light gray */
+a:visited{color: #88141e;} /* darker green */
+a:hover{color: #c77c1b;}    /* medium light green*/
 a:title{color: #ffffff}
 
 /* Sub Heading Formatting */
@@ -154,9 +154,9 @@ a:title{color: #ffffff}
     position: relative;
     width: 45px;
     left: -1px;
-    background-color: #340F09;
-    color: #340F09;
-    border: 1px solid #340F09;
+    background-color: #b46e1e;
+    color: #643c0e;
+    border: 1px solid #7e521f;
     border-radius: 5px 0 5px 0
 }
 
@@ -165,8 +165,8 @@ a:title{color: #ffffff}
     position: relative;
     width: 210.5px;
     left: -1px;
-    background-color: #340F09;
-    color: #340F09;
-    border: 1px solid #340F09;
+    background-color: #b46e1e;
+    color: #643c0e;
+    border: 1px solid #7e521f;
     border-radius: 5px 0 5px 0
 }

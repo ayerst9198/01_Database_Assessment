@@ -1,6 +1,6 @@
 <div class="box side">
 
-        <h2>Search | <a class="side" href="show_all.php">Show All</a></h2>
+        <h2>Search | <a class="side" href="showall.php">Show All</a></h2>
 
         <i>Type part of the title / author name if desired</i>
 
@@ -10,7 +10,7 @@
 
         <form method="post" action="title_search.php" enctype="multipart/form-data" >
 
-        <input class="search" type="text" name="title" size="40" value="" required placeholder="Title..." />
+        <input class="search" type="text" name="title" size="40" value="" required placeholder="Food Name..." />
 
         <input class="submit_wide" type ="submit" name="findall_title" value="&#xf002;" />
         
@@ -24,7 +24,7 @@
 
         <form method="post" action="author_search.php" enctype="multipart/form-data" >
 
-        <input class="search" type="text" name="author" size="40" value="" required placeholder="Author..." />
+        <input class="search" type="text" name="author" size="40" value="" required placeholder="Time..." />
 
         <input class="submit_wide" type ="submit" name="findall_author" value="&#xf002;" />
         
@@ -33,44 +33,39 @@
 
         <hr class="line"/>
 
-        <i>Please use the drop down box to select genre or ratings</i>
-
-        <hr class="line"/>
         <!-- start of genre search !-->
 
-        <form method="post" action="genre_search.php" enctype="multipart/form-data" >
+        
+        <form method="post" action="author_search.php" enctype="multipart/form-data" >
 
-        <select name="genre" required>
-            <option value="" disabled selected>genre...</option>
-            <?php
-            // retrieve unique values in genre column
-            $genre_sql="SELECT DISTINCT `Genre` FROM `book_reviews` ORDER BY `book_reviews`.`Genre` ASC";
-            $genre_query=mysqli_query($dbconnect, $genre_sql);
-            $genre_rs=mysqli_fetch_assoc($genre_query);
+        <input class="search" type="text" name="author" size="40" value="" required placeholder="Place..." />
 
-            do {
-
-                ?>
-
-                <option value="<?php echo $genre_rs['Genre'];?>" ><?php echo $genre_rs['Genre'];?></option> 
-
-                <?php
-            } // end of genre option retrieval
-
-            while ($genre_rs=mysqli_fetch_assoc($genre_query));
-
-            ?>
-
-
-            
-
-
-        </select>
-
-        <input class="submit" type ="submit" name="findall_genre" value="&#xf002;" />
+        <input class="submit_wide" type ="submit" name="findall_author" value="&#xf002;" />
         
         </form>
+
+
         <!-- end of genre search !-->
+        <hr class="line"/>
+        
+        <i>Please use the drop down box to select Vegetarian or Ratings</i>
+
+        <hr class="line"/>
+
+        <!-- start of veg search !-->
+
+        <form method="post" action="veg_search.php" enctype="multipart/form-data" required placeholder="Vegetarian">
+            <select class="half_width" name="yes/no">
+                <option value="yes" >Yes...</option>
+                <option value="no" selected>No...</option>
+            </select>
+
+            <input type="submit" class="submit" name="findall_rating" value="&#xf002;" />
+        
+        </form>
+
+        <!-- end of veg search !-->
+
         <hr class="line"/>
 
 
@@ -104,6 +99,7 @@
 
 
         </div> <!-- / side bar -->
+
 
 <div class="box footer">
             CC yourname 20XX
