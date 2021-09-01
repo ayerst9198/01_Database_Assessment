@@ -2,53 +2,64 @@
 
         <h2>Search | <a class="side" href="showall.php">Show All</a></h2>
 
-        <i>Type part of the title / author name if desired</i>
+        <i>Type part of the food name if desired</i>
 
         <hr class="line"/>
 
-        <!-- Start of Title Search -->
+        <!-- Start of Food Name Search -->
 
-        <form method="post" action="title_search.php" enctype="multipart/form-data" >
+        <form method="post" action="food_search.php" enctype="multipart/form-data" >
 
-        <input class="search" type="text" name="title" size="40" value="" required placeholder="Food Name..." />
+        <input class="search" type="text" name="food_name" size="40" value="" required placeholder="Food Name..." />
 
-        <input class="submit_wide" type ="submit" name="findall_title" value="&#xf002;" />
+        <input class="submit_wide" type ="submit" name="food_search" value="&#xf002;" />
         
         </form>
 
-        <!-- end of title search -->
+        <!-- end of Food Name search -->
 
         <hr class="line"/>
 
-        <!-- start of author search !-->
+        <i>Please use the drop down box to select your search option</i>
 
-        <form method="post" action="author_search.php" enctype="multipart/form-data" >
+        <hr class="line"/>
 
-        <input class="search" type="text" name="author" size="40" value="" required placeholder="Time..." />
+        <!-- start of time search !-->
 
-        <input class="submit_wide" type ="submit" name="findall_author" value="&#xf002;" />
+        <form method="post" action="time_search.php" enctype="multipart/form-data" required placeholder="Time">
+            <select class="half_width" name="yes/no">
+             <option value="" disabled selected>Select a Time...</option>
+                <option value="yes" >Breakfast...</option>
+                <option value="no" >Lunch...</option>
+                <option value="no" >Dinner...</option>
+                <option value="no" >Dessert...</option>
+                
+            </select>
+
+            <input type="submit" class="time_submit" name="findall_rating" value="&#xf002;" />
         
         </form>
-        <!-- end of author search !-->
+        <!-- end of time search !-->
 
         <hr class="line"/>
+        
 
-        <!-- start of genre search !-->
+        <!-- start of place search !-->
 
         
-        <form method="post" action="author_search.php" enctype="multipart/form-data" >
+        <form method="post" action="place_search.php" enctype="multipart/form-data" required placeholder="Place">
+            <select class="half_width" name="yes/no">
+                <option value="" disabled selected>Place...</option>
+                <option value="yes" >Home...</option>
+                <option value="no" >Restaurant...</option>
+            </select>
 
-        <input class="search" type="text" name="author" size="40" value="" required placeholder="Place..." />
-
-        <input class="submit_wide" type ="submit" name="findall_author" value="&#xf002;" />
+            <input type="submit" class="submit" name="findall_rating" value="&#xf002;" />
         
         </form>
 
 
-        <!-- end of genre search !-->
-        <hr class="line"/>
-        
-        <i>Please use the drop down box to select Vegetarian or Ratings</i>
+        <!-- end of place search !-->
 
         <hr class="line"/>
 
@@ -56,8 +67,9 @@
 
         <form method="post" action="veg_search.php" enctype="multipart/form-data" required placeholder="Vegetarian">
             <select class="half_width" name="yes/no">
+             <option value="" disabled selected>Vegetarian...</option>
                 <option value="yes" >Yes...</option>
-                <option value="no" selected>No...</option>
+                <option value="no" >No...</option>
             </select>
 
             <input type="submit" class="submit" name="findall_rating" value="&#xf002;" />
@@ -87,7 +99,7 @@
                 <option value=5>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
             </select>
 
-            <input type="submit" class="submit" name="findall_rating" value="&#xf002;" />
+            <input type="submit" class="rating_submit" name="findall_rating" value="&#xf002;" />
             
             
             
@@ -102,7 +114,7 @@
 
 
 <div class="box footer">
-            CC yourname 20XX
+            CC yourname 2021
         </div>    <!-- / footer -->
     
     </div>  <!-- / wrapper  -->

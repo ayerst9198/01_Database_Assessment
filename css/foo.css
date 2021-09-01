@@ -100,15 +100,15 @@ a:title{color: #ffffff}
 /* Sub Heading Formatting */
 .sub_heading {
     font-family: 'Ubuntu', sans-serif;
-    color: #2D4125; /* grey */
+    color: #000; /* black */
     font-weight: bold;
 }
 
 /* Results box formatting */
 .results {
-    background-color: #A3C497;
+    background-color: #f59031;
     border-radius: 10px;
-    border: 1px solid #000;
+    border: 1px solid #A1021D;
     padding: 5px;
 }
 
@@ -152,13 +152,36 @@ a:title{color: #ffffff}
 .submit {
     font-family: FontAwesome;
     position: relative;
-    width: 45px;
+    width: 105px;
     left: -1px;
     background-color: #b46e1e;
     color: #643c0e;
     border: 1px solid #7e521f;
-    border-radius: 5px 0 5px 0
+    border-radius: 500px 500px 500px 500px
 }
+
+.rating_submit {
+    font-family: FontAwesome;
+    position: relative;
+    width: 40px;
+    left: -1px;
+    background-color: #b46e1e;
+    color: #643c0e;
+    border: 1px solid #7e521f;
+    border-radius: 500px 500px 500px 500px
+}
+
+.time_submit {
+    font-family: FontAwesome;
+    position: relative;
+    width: 89px;
+    left: -1px;
+    background-color: #b46e1e;
+    color: #643c0e;
+    border: 1px solid #7e521f;
+    border-radius: 500px 500px 500px 500px
+}
+
 
 .submit_wide {
     font-family: FontAwesome;
@@ -168,5 +191,5 @@ a:title{color: #ffffff}
     background-color: #b46e1e;
     color: #643c0e;
     border: 1px solid #7e521f;
-    border-radius: 5px 0 5px 0
+    border-radius: 500px 500px 500px 500px
 }

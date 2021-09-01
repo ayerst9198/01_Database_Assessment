@@ -16,6 +16,8 @@
 
     // check if there are any results
 
+    // if there are not results, output error
+
     if ($count<1)
 
     {
@@ -28,8 +30,7 @@
         <?php
     }  // end count 'if'
 
-
-    // if there are not results, output error
+    
     else {
         
         do{
