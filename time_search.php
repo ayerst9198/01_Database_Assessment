@@ -2,39 +2,38 @@
 
 
     // if find button pushed...
-    if(isset($_POST['food_search']))
+    if(isset($_POST['time_search']))
 
     {
 
-    // retrieves author and sanitizes it
-    $food=test_input(mysqli_real_escape_string($dbconnect,$_POST['food_name']));
-    
-    $findall_sql="SELECT * FROM `food_reviews` WHERE `Food Name` LIKE '%$food%' ORDER BY `Food Name` ASC";
+    $time=test_input(mysqli_real_escape_string($dbconnect,$_POST['time']));
+
+    $findall_sql="SELECT * FROM `food_reviews` WHERE `Time` LIKE '%$time%' ORDER BY `Time` ASC";
     $findall_query=mysqli_query($dbconnect, $findall_sql);
     $findall_rs=mysqli_fetch_assoc($findall_query);
     $count=mysqli_num_rows($findall_query);
-
+    echo "$time";
 
 ?>
 
 <div class="box main">
 
-    <h2>Food search</h2>
+    <h2>Time search</h2>
 
     <?php
+
+    echo "$time";
 
     // check if there are any results
 
     if ($count<1)
 
     {
-        echo "$food";
         ?>
         <div class="error">
             Sorry! There are no results that match your search.
             Please use the search box in the side bar to try again.
         </div>
-        
 
         <?php
     }  // end count 'if'
@@ -46,12 +45,13 @@
         do{
         ?>
             <!-- Results go here -->
+        
         <div class="results">
         
         <p>Food Name: <span class="sub_heading"><?php echo $findall_rs['Food Name']; ?></span>
         </p>
 
-        <p>Time: <span class="sub_heading"><?php echo $findall_rs['Time']; ?></span>
+        <p>Time: <span class="sub_heading"><?php echo $findall_rs['time']; ?></span>
         </p>
 
         <p>Place: <span class="sub_heading"><?php echo $findall_rs['Place']; ?></span>

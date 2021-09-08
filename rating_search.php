@@ -2,24 +2,41 @@
 
 
     // if find button pushed...
-    if(isset($_POST['food_search']))
+    if(isset($_POST['findall_rating']))
 
     {
 
     // retrieves author and sanitizes it
-    $food=test_input(mysqli_real_escape_string($dbconnect,$_POST['food_name']));
+    $amount=test_input(mysqli_real_escape_string($dbconnect,$_POST['amount']));
+    $stars=test_input(mysqli_real_escape_string($dbconnect,$_POST['stars']));
     
-    $findall_sql="SELECT * FROM `food_reviews` WHERE `Food Name` LIKE '%$food%' ORDER BY `Food Name` ASC";
+    if($amount=="exactly")
+
+    {
+        $findall_sql="SELECT * FROM `food_reviews` WHERE `Rating` = $stars ORDER BY `Food Name` ASC";
+    }
+
+    elseif($amount=="less")
+
+    {
+        // $findall_sql="SELECT * FROM 'book_reviews' WHERE 'Rating' <= $stars ORDER BY 'Title' ASC  ";
+        $findall_sql="SELECT * FROM `food_reviews` WHERE `Rating` <= $stars ORDER BY `Food Name` ASC";
+    }
+
+    else {
+        $findall_sql="SELECT * FROM `food_reviews` WHERE `Rating` >= $stars ORDER BY `Food Name` ASC";
+    }
+
+
     $findall_query=mysqli_query($dbconnect, $findall_sql);
     $findall_rs=mysqli_fetch_assoc($findall_query);
     $count=mysqli_num_rows($findall_query);
-
 
 ?>
 
 <div class="box main">
 
-    <h2>Food search</h2>
+    <h2>Rating search</h2>
 
     <?php
 
@@ -28,13 +45,11 @@
     if ($count<1)
 
     {
-        echo "$food";
         ?>
         <div class="error">
             Sorry! There are no results that match your search.
             Please use the search box in the side bar to try again.
         </div>
-        
 
         <?php
     }  // end count 'if'

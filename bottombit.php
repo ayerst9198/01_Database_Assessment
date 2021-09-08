@@ -27,7 +27,7 @@
         <!-- start of time search !-->
 
         <form method="post" action="time_search.php" enctype="multipart/form-data" required placeholder="Time">
-            <select class="half_width" name="yes/no">
+            <select class="half_width" name="time">
              <option value="" disabled selected>Select a Time...</option>
                 <option value="yes" >Breakfast...</option>
                 <option value="no" >Lunch...</option>
