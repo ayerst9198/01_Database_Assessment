@@ -2,7 +2,7 @@
 
 
     // if find button pushed...
-    if(isset($_POST['time_search']))
+    if(isset($_POST['findall_time']))
 
     {
 
@@ -12,7 +12,6 @@
     $findall_query=mysqli_query($dbconnect, $findall_sql);
     $findall_rs=mysqli_fetch_assoc($findall_query);
     $count=mysqli_num_rows($findall_query);
-    echo "$time";
 
 ?>
 
@@ -22,7 +21,6 @@
 
     <?php
 
-    echo "$time";
 
     // check if there are any results
 
@@ -51,7 +49,7 @@
         <p>Food Name: <span class="sub_heading"><?php echo $findall_rs['Food Name']; ?></span>
         </p>
 
-        <p>Time: <span class="sub_heading"><?php echo $findall_rs['time']; ?></span>
+        <p>Time: <span class="sub_heading"><?php echo $findall_rs['Time']; ?></span>
         </p>
 
         <p>Place: <span class="sub_heading"><?php echo $findall_rs['Place']; ?></span>

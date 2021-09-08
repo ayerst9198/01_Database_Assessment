@@ -26,17 +26,36 @@
 
         <!-- start of time search !-->
 
-        <form method="post" action="time_search.php" enctype="multipart/form-data" required placeholder="Time">
-            <select class="half_width" name="time">
-             <option value="" disabled selected>Select a Time...</option>
-                <option value="yes" >Breakfast...</option>
-                <option value="no" >Lunch...</option>
-                <option value="no" >Dinner...</option>
-                <option value="no" >Dessert...</option>
-                
-            </select>
+        <form method="post" action="time_search.php" enctype="multipart/form-data" >
 
-            <input type="submit" class="time_submit" name="findall_rating" value="&#xf002;" />
+        <select name="time" required>
+            <option value="" disabled selected>Time...</option>
+            <?php
+            // retrieve unique values in time column
+            $time_sql="SELECT DISTINCT `Time` FROM `food_reviews` ORDER BY `food_reviews`.`Time` ASC";
+            $time_query=mysqli_query($dbconnect, $time_sql);
+            $time_rs=mysqli_fetch_assoc($time_query);
+
+            do {
+
+                ?>
+
+                <option value="<?php echo $time_rs['Time'];?>" ><?php echo $time_rs['Time'];?></option> 
+
+                <?php
+            } // end of time option retrieval
+
+            while ($time_rs=mysqli_fetch_assoc($time_query));
+
+            ?>
+
+
+            
+
+
+        </select>
+
+        <input class="submit" type ="submit" name="findall_time" value="&#xf002;" />
         
         </form>
         <!-- end of time search !-->
