@@ -64,16 +64,15 @@
         
 
         <!-- start of place search !-->
-
         
         <form method="post" action="place_search.php" enctype="multipart/form-data" required placeholder="Place">
-            <select class="half_width" name="yes/no">
+            <select class="half_width" name="place">
                 <option value="" disabled selected>Place...</option>
-                <option value="yes" >Home...</option>
-                <option value="no" >Restaurant...</option>
+                <option value="Home" >Home...</option>
+                <option value="Restaurant" >Restaurant...</option>
             </select>
 
-            <input type="submit" class="submit" name="findall_rating" value="&#xf002;" />
+            <input type="submit" class="submit" name="findall_place" value="&#xf002;" />
         
         </form>
 
@@ -91,7 +90,7 @@
                 <option value="no" >No...</option>
             </select>
 
-            <input type="submit" class="submit" name="findall_rating" value="&#xf002;" />
+            <input type="submit" class="submit" name="findall_veg" value="&#xf002;" />
         
         </form>
 
