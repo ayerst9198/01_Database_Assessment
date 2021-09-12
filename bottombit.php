@@ -84,7 +84,7 @@
         <!-- start of veg search !-->
 
         <form method="post" action="veg_search.php" enctype="multipart/form-data" required placeholder="Vegetarian">
-            <select class="half_width" name="yes/no">
+            <select class="half_width" name="veg">
              <option value="" disabled selected>Vegetarian...</option>
                 <option value="yes" >Yes...</option>
                 <option value="no" >No...</option>
