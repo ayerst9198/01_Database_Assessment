@@ -28,7 +28,6 @@
     if ($count<1)
 
     {
-        echo "$food";
         ?>
         <div class="error">
             Sorry! There are no results that match your search.

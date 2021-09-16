@@ -66,8 +66,8 @@
         <!-- start of place search !-->
         
         <form method="post" action="place_search.php" enctype="multipart/form-data" required placeholder="Place">
-            <select class="half_width" name="place">
-                <option value="" disabled selected>Place...</option>
+            <select class="half_width" name="place" required>
+            <option value="" disabled selected>Place...</option>
                 <option value="Home" >Home...</option>
                 <option value="Restaurant" >Restaurant...</option>
             </select>
@@ -84,8 +84,8 @@
         <!-- start of veg search !-->
 
         <form method="post" action="veg_search.php" enctype="multipart/form-data" required placeholder="Vegetarian">
-            <select class="half_width" name="veg">
-             <option value="" disabled selected>Vegetarian...</option>
+            <select class="half_width" name="veg" required>
+                <option value="" disabled selected>Vegetarian...</option>
                 <option value="yes" >Yes...</option>
                 <option value="no" >No...</option>
             </select>
@@ -132,7 +132,7 @@
 
 
 <div class="box footer">
-            CC yourname 2021
+            CC TobyAyers 2021
         </div>    <!-- / footer -->
     
     </div>  <!-- / wrapper  -->
