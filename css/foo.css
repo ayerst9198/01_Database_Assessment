@@ -157,7 +157,7 @@ a:title{color: #ffffff}
     background-color: #b46e1e;
     color: #643c0e;
     border: 1px solid #7e521f;
-    border-radius: 500px 500px 500px 500px
+    border-radius: 0px 500px 500px 0px
 }
 
 .rating_submit {
@@ -168,18 +168,18 @@ a:title{color: #ffffff}
     background-color: #b46e1e;
     color: #643c0e;
     border: 1px solid #7e521f;
-    border-radius: 500px 500px 500px 500px
+    border-radius: 0px 500px 500px 0px
 }
 
 .time_submit {
     font-family: FontAwesome;
     position: relative;
-    width: 89px;
+    width: 210spx;
     left: -1px;
     background-color: #b46e1e;
     color: #643c0e;
     border: 1px solid #7e521f;
-    border-radius: 500px 500px 500px 500px
+    border-radius: 0px 500px 500px 0px
 }
 
 
@@ -191,5 +191,5 @@ a:title{color: #ffffff}
     background-color: #b46e1e;
     color: #643c0e;
     border: 1px solid #7e521f;
-    border-radius: 500px 500px 500px 500px
+    border-radius: 0px 500px 500px 0px
 }

@@ -32,7 +32,7 @@
             <option value="" disabled selected>Time...</option>
             <?php
             // retrieve unique values in time column
-            $time_sql="SELECT DISTINCT `Time` FROM `food_reviews` ORDER BY `food_reviews`.`Time` ASC";
+            $time_sql="SELECT DISTINCT `Time` FROM `food_reviews`";
             $time_query=mysqli_query($dbconnect, $time_sql);
             $time_rs=mysqli_fetch_assoc($time_query);
 
